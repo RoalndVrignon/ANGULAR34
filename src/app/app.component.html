@@ -1,0 +1,17 @@
+<app-todos></app-todos>
+<h1>
+  {{title}}
+</h1>
+
+ <h3>jeux </h3>
+<ul>
+  <!-- *ngFor permet de générer autant d'élément HTML que le tableau en contient -->
+  <li *ngFor="let jeu of jeux">
+    <span (click)="editTodo(todo)">
+    <h1>{{jeu.name}}</h1>
+     <p>{{jeu.summary}}</p>
+      {{jeu.genres}}
+    <button (click)="deleteTodo(todo)">x</button>
+    </span>
+  </li>
+</ul>

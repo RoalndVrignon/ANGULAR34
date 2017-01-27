@@ -1,0 +1,21 @@
+<h3>Hello ici le composant todos works!</h3>
+
+<div *ngIf="appState=='default'">
+    <h3>Add todo</h3>
+    <form (submit)="addTodo()">
+       <input type="text" [(ngModel)]="todo_name" name="new_todo" />
+    </form>
+</div>
+<div *ngIf="appState=='edit'">
+    <h3>Edit todo</h3>
+    <form (submit)="updateTodo()">
+       <input type="text" [(ngModel)]="todo_name" name="new_todo" />
+    </form>
+</div>
+
+<h3>Todo List</h3>
+<ul>
+    <li *ngFor="let todo of todos">
+      <span (click)="editTodo(todo)">{{todo.text}}</span>
+    </li>
+</ul>
