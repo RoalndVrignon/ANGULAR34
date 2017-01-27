@@ -1,45 +1,110 @@
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="#">
-    <img src="https://steamstore-a.akamaihd.net/public/shared/images/responsive/share_steam_logo.png" class="logo">
-  </a>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Bibliothèque</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+
 
 <app-header></app-header>
 
-<h1>
-  Jeux
-</h1>
+  <body class="bg-faded">
+    <header id="first">
+    <div class="header-content">
+        <div class="inner">
+            <h1>Steam like avec Angular2</h1>
+            <a href="#one" class="btn btn-primary-outline btn-xl page-scroll wow fadeInUp m-t-3">Get Started</a>
+        </div>
+    </div>
+</header>
+<nav id="topNav" class="navbar fixed-top navbar-toggleable-sm">
+    <div class="container">
+        <button class="navbar-toggler hidden-md-up float-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            ☰
+        </button>
+        <a class="navbar-brand page-scroll" href="#first"><img src="https://steamstore-a.akamaihd.net/public/shared/images/responsive/share_steam_logo.png" class="logo"></a>
+        <div class="collapse navbar-collapse" id="collapsingNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#one">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#two">Bibliothèque</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" data-toggle="modal" title="A free Bootstrap theme" href="#aboutModal">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section id="one">
+       <div class="container wow fadeInUp">
+        <h1 class="lead">
+           Bienvenue sur la plateforme des jeux vidéos de Steam Like.<br> Nous vous proposons notre bibliothèque de jeux, 
+           avec un descriptif détaillé de chaque jeu. 
+        </h1>
+        <h2>TOP 3 des jeux</h2>
+        <div class="card-group">
+      
+            <!-- card -->
+            <div class="card">
+                <img class="card-img-top img-fluid" src="http://www.goldenmoustache.com/wp-content/uploads/2016/09/7f0b4bc0-6a3a-4858-adfb-6f9fa5110fae.jpg" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Mario Kart</h4>
+                    <p class="card-text">Mario Kart est un classique.</p>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card">
+                <img class="card-img-top img-fluid" src="https://lh3.googleusercontent.com/DemQZzRnj5Ym6-D6ZgVO3zFbgUh3P5EmsvntUu8EauDZsO4ah4J3op5kSRykNvzj6Nk=h900" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Candy Crush Soda Saga</h4>
+                    <p class="card-text">Le jeu addictif</p>
+                </div>
+            </div>
+            <!-- card -->
+            <div class="card">
+                <img class="card-img-top img-fluid" src="https://lh3.ggpht.com/soywaPw0kB7fiDHokNdGlxbOijFwLe8XahjnZhJAejpCTcPMdogHEu10hcAF6dBW9LI=h900" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Grand theft auto vice city</h4>
+                    <p class="card-text">A frequent problem occurs when you have multiple items in a row with content of varying height. Thanks to flexbox (and display:table) we now have equal height cards!</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="two" class="bg-alt">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="m-t-0 text-primary">Flexbox</h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+    <div class="container wow fadeInUp">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 text-center">
+                <div class="feature">
+                  <ul>
+                  <!-- *ngFor permet de générer autant d'élément HTML que le tableau en contient -->
+                  <li *ngFor="let jeu of jeux">
+                    <span (click)="editTodo(todo)">
+                    <h1>{{jeu.name}}</h1>
+                    <p>{{jeu.summary}}</p>
+                      {{jeu.genres}}
+                    <button (click)="deleteTodo(todo)">x</button>
+                    </span>
+                  </li>
+                </ul>
+                    <i class="icon-lg ion-ios-grid-view-outline wow fadeIn" data-wow-delay=".1s"></i>
+                    <h6 class="text-uppercase">Easier</h6>
+                    <p class="text-muted m-b-0">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
 
-<ul>
-  <!-- *ngFor permet de générer autant d'élément HTML que le tableau en contient -->
-  <li *ngFor="let jeu of jeux">
-    <span (click)="editTodo(todo)">
-    <h1>{{jeu.name}}</h1>
-     <p>{{jeu.summary}}</p>
-     <img src="{{jeu.screenshots/url}}"/>
-      {{jeu.genres}}
-    <button (click)="deleteTodo(todo)">x</button>
-    </span>
-  </li>
-</ul>
+
 <app-footer></app-footer>
 
