@@ -6,16 +6,20 @@ import { HttpModule } from '@angular/http';
 // on importe les composants présents sur l'app
 import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
-import { GamesService } from './games.service';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 // on importe les services
-import {TodoService } from "./todo.service"
+import { TodoService } from "./todo.service";
+import { GamesService } from './games.service';
 
 @NgModule({
   // on déclare les composants pour pouvoir les utiliser
   declarations: [
     AppComponent,
-    TodosComponent
+    TodosComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
