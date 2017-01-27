@@ -1,3 +1,25 @@
 h1{
     color: lightpink;
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+p{
+    margin-left: 4%;
+    margin-right:6%;
+}
+
+ul {
+list-style:none;
+margin-left:0;
+padding-left:0;
+}
+
+li {
+margin-bottom:15px;/* à adapter */
+}
+
+.logo{
+    width: 60px;
+    height: auto;
 }
