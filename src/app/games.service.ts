@@ -6,8 +6,8 @@ interface Jeu{
   name:string;
   summary:string;
   genres:number[];
-  screenshots:urlImg[];
-  cover:urlImg;
+  screenshots:string;
+  cover:string;
   videos?:{"name": string; "video_id": number;};
 }
 

@@ -6,12 +6,20 @@
  <h3>jeux </h3>
 <ul>
   <!-- *ngFor permet de générer autant d'élément HTML que le tableau en contient -->
-  <li *ngFor="let jeu of jeux">
-    <span (click)="editTodo(todo)">
-    <h1>{{jeu.name}}</h1>
-     <p>{{jeu.summary}}</p>
-      {{jeu.genres}}
-    <button (click)="deleteTodo(todo)">x</button>
-    </span>
-  </li>
+
+
+
+  <div class="container">
+    <div class="row" >
+      <div *ngFor="let jeu of jeux" class="col-sm-3">
+          <span  (click)="editTodo(todo)">
+            <img src="{{jeu.cover.url}}">
+            <h2>{{jeu.name}}</h2>
+            {{jeu.genres}}
+          <button (click)="deleteTodo(todo)">x</button>
+          </span>
+      </div>
+    </div>
+  </div>
+  
 </ul>
