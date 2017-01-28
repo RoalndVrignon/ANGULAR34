@@ -7,16 +7,18 @@
 <ul>
   <!-- *ngFor permet de générer autant d'élément HTML que le tableau en contient -->
 
-
+ <h3>bibliotheque des jeux</h3>
 
   <div class="container">
     <div class="row" >
-      <div *ngFor="let jeu of jeux" class="col-sm-3">
+      <div *ngFor="let jeu of jeux" class="col-sm-12 col-md-12 col-lg-9">
           <span  (click)="editTodo(todo)">
+            <hr width="100%" color="black">
             <img src="{{jeu.cover.url}}">
             <h2>{{jeu.name}}</h2>
-            {{jeu.genres}}
-          <button (click)="deleteTodo(todo)">x</button>
+            Genre: {{jeu.genres}} 
+            <br><br><br>
+          <p>supprimer de la bibliotheque <button (click)="deleteTodo(todo)">x</button></p>
           </span>
       </div>
     </div>
