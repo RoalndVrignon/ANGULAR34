@@ -7,6 +7,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
 import { GamesService } from './games.service';
+import { BibliothequeService } from './bibliotheque.service';
 
 // on importe les services
 import {TodoService } from "./todo.service"
