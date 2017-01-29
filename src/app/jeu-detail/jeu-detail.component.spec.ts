@@ -26,3 +26,4 @@ describe('JeuDetailComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
