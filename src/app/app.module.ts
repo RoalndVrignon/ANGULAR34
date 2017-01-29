@@ -9,6 +9,9 @@ import { TodosComponent } from './todos/todos.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { BibliothequeService } from './bibliotheque.service';
+
+
 
 // on importe les services
 import { TodoService } from "./todo.service";
@@ -27,6 +30,7 @@ import { GamesService } from './games.service';
     FormsModule,
     HttpModule
   ],
+
   // on déclare son service pour que chaque composant l'utilise
   providers: [TodoService,GamesService],
 
